@@ -62,11 +62,11 @@ const initialObjects: CialoNiebieskie[] = [
 
 function App() {
     const [objects, setObjects] = useState<CialoNiebieskie[]>(initialObjects);
-    const [selectedId, setSelectedId] = useState<number | null>(null);
+    const [selectedObject, setSelectedObject] = useState<CialoNiebieskie | null>(null);
 
 
-    const handleSelectObject = (id: number) => {
-        setSelectedId(id);
+    const handleSelectObject = (object: CialoNiebieskie) => {
+        setSelectedObject(object);
     };
 
     const handleAddObject = (newObjectData: NowyObiektDane) => {
@@ -77,8 +77,6 @@ function App() {
         setObjects([...objects, objectWithId]);
     };
 
-
-    const activeObject = objects.find(obj => obj.id === selectedId);
 
     return (
         <div
@@ -106,14 +104,14 @@ function App() {
                 <div className="w-full md:w-1/3 shrink-0 flex flex-col">
                     <CatalogList
                         objects={objects}
-                        selectedId={selectedId}
+                        selectedObject={selectedObject}
                         onSelectedObject={handleSelectObject}
                     />
                 </div>
 
 
                 <div className="flex-1 flex flex-col">
-                    <ObjectDetails selectedObjects={activeObject}/>
+                    <ObjectDetails selectedObjects={selectedObject}/>
                 </div>
 
             </div>
