@@ -1,7 +1,7 @@
 import {type CialoNiebieskie } from './App';
 
 interface ObjectDetailsProps {
-    selectedObjects: CialoNiebieskie | undefined;
+    selectedObjects: CialoNiebieskie | null;
 }
 
 export default function ObjectDetails({ selectedObjects }: ObjectDetailsProps) {

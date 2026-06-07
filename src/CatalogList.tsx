@@ -2,11 +2,11 @@ import type {CialoNiebieskie} from './App';
 
 interface CatalogListProps {
     objects: CialoNiebieskie[];
-    selectedId: number | null;
-    onSelectedObject: (id: number) => void;
+    selectedObject: CialoNiebieskie | null;
+    onSelectedObject: (object: CialoNiebieskie) => void;
 }
 
-export default function CatalogList({ objects, selectedId, onSelectedObject }: CatalogListProps) {
+export default function CatalogList({ objects, selectedObject, onSelectedObject }: CatalogListProps) {
     return (
         <aside className="bg-slate-900/40 border border-slate-800 rounded-2xl flex flex-col h-full shadow-xl overflow-hidden">
 
@@ -24,11 +24,11 @@ export default function CatalogList({ objects, selectedId, onSelectedObject }: C
             {/* Renderowanie listy za pomocą metody .map() z zachowaniem klucza key (Zadanie 4) */}
             <ul className="flex-1 overflow-y-auto p-4 space-y-2 max-h-[340px] md:max-h-[380px]">
                 {objects.map((obiekt) => {
-                    const jestWybrany = selectedId === obiekt.id;
+                    const jestWybrany = selectedObject?.id === obiekt.id;
                     return (
                         <li
                             key={obiekt.id} // Klucz wymagany przez React
-                            onClick={() => onSelectedObject(obiekt.id)} // Przekazywanie akcji wyboru w górę do rodzica
+                            onClick={() => onSelectedObject(obiekt)} // Przekazywanie akcji wyboru w górę do rodzica
                             className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition-all duration-300 group ${
                                 jestWybrany
                                     ? 'bg-indigo-600/90 text-white shadow-lg shadow-indigo-950/40 ring-1 ring-indigo-400'
