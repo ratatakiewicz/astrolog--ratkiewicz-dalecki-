@@ -21,7 +21,7 @@ const initialObjects: CialoNiebieskie[] = [
         nazwa: 'Mars',
         typ: 'Planeta skalista',
         odleglosc: '225 mln km',
-        zdjecie: 'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&q=80&w=600',
+        zdjecie: 'https://imgs.search.brave.com/1g0L40kX7j4tac39jyH1nHU4a65wxj3YtRlwLo1KXjA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvMjAz/Mzc1OTYvcGV4ZWxz/LXBob3RvLTIwMzM3/NTk2L2ZyZWUtcGhv/dG8tb2YtbmllYm8t/a29zbW9zLXByemVz/dHJ6ZW4tZ2FsYXh5/LmpwZWc_YXV0bz1j/b21wcmVzcyZjcz10/aW55c3JnYiZkcHI9/MSZ3PTUwMA',
         opis: 'Czwarta planeta od Słońca, znana jako Czerwona Planeta. Posiada dwa małe księżyce: Fobosa i Deimosa.'
     },
     {
